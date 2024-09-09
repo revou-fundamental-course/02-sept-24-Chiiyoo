@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Luas & Keliling Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Luas & Keliling Segitiga</h2>
+        </div>
+
+        <div class="menu">
+            <button onclick="showForm('luas')">Hitung Luas Segitiga</button>
+            <button onclick="showForm('keliling')">Hitung Keliling Segitiga</button>
+        </div>
+
+        <div id="form-luas" class="form" style="display: none;">
+            <div class="formula">
+                <p>Rumus Luas Segitiga: L = 1/2 x a x t</p>
+                <p>Untuk menghitung luas segitiga, Anda memerlukan panjang alas (a) dan tinggi (t).</p>
+            </div>
+            <div class="input-group">
+                <label for="nilaiAlasLuas">Nilai Alas (a)</label>
+                <input type="number" id="nilaiAlasLuas" placeholder="Masukkan panjang alas" min="0" required>
+            </div>
+            <div class="input-group">
+                <label for="nilaiTinggiLuas">Nilai Tinggi (t)</label>
+                <input type="number" id="nilaiTinggiLuas" placeholder="Masukkan tinggi segitiga" min="0" required>
+            </div>
+            <div class="error" id="error-luas"></div>
+            <div class="buttons">
+                <button class="hitung" onclick="hitungLuas()">Hitung Luas</button>
+                <button class="reset" onclick="resetForm('luas')">Reset</button>
+            </div>
+            <div class="results" id="results-luas">
+                <p><strong>Rumus:</strong> L = 1/2 x a x t</p>
+                <p><strong>Cara Perhitungan:</strong> <span id="caraLuas"></span></p>
+                <p><strong>Hasil:</strong> <span id="luasHasil"></span></p>
+            </div>
+        </div>
+
+        <div id="form-keliling" class="form" style="display: none;">
+            <div class="formula">
+                <p>Rumus Keliling Segitiga: K = a + b + c</p>
+                <p>Untuk menghitung keliling segitiga, Anda memerlukan panjang ketiga sisi segitiga: a, b, dan c.</p>
+            </div>
+            <div class="input-group">
+                <label for="nilaiAlasKeliling">Nilai Alas (a)</label>
+                <input type="number" id="nilaiAlasKeliling" placeholder="Masukkan panjang alas" min="0" required>
+            </div>
+            <div class="input-group">
+                <label for="nilaiSisiB">Sisi B (b)</label>
+                <input type="number" id="nilaiSisiB" placeholder="Masukkan panjang sisi b" min="0" required>
+            </div>
+            <div class="input-group">
+                <label for="nilaiSisiC">Sisi C (c)</label>
+                <input type="number" id="nilaiSisiC" placeholder="Masukkan panjang sisi c" min="0" required>
+            </div>
+            <div class="error" id="error-keliling"></div>
+            <div class="buttons">
+                <button class="hitung" onclick="hitungKeliling()">Hitung Keliling</button>
+                <button class="reset" onclick="resetForm('keliling')">Reset</button>
+            </div>
+            <div class="results" id="results-keliling">
+                <p><strong>Rumus:</strong> K = a + b + c</p>
+                <p><strong>Cara Perhitungan:</strong> <span id="caraKeliling"></span></p>
+                <p><strong>Hasil:</strong> <span id="kelilingHasil"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.header {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.menu button {
+  width: 48%;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+}
+
+.menu button:hover {
+  background-color: #003cff;
+  transform: scale(1.05);
+}
+
+.menu button:active {
+  transform: scale(0.98);
+}
+
+.formula {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.input-group {
+  margin: 15px 0;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons button {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons .hitung {
+  background-color: #007bff;
+  color: white;
+}
+
+.buttons .reset {
+  background-color: #ffc107;
+  color: black;
+}
+
+.results {
+  margin-top: 20px;
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.results p {
+  margin: 5px 0;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
